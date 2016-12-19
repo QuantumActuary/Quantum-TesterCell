@@ -14,14 +14,16 @@ add_definitions(-std=c++1y)
 include_directories(
     .
     ${CMAKE_INSTALL_PREFIX}/include
+    ${CMAKE_INSTALL_PREFIX}/include/Quantum
     ${PYTHON_INCLUDE_DIRS}
     /usr/local/gtest/include
+    /usr/local/cellar/boost/1.62.0/include
 )
 
 LINK_DIRECTORIES(
     ${PYTHON_LIBRARIES}
     /usr/local/gtest/lib
-    /usr/local/lib
+    /Applications/Quantum.app/Contents/Resources/.kivy/lib
 )
 
 add_library(${PROJECT_NAME} SHARED
@@ -36,7 +38,7 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME}
     gtest
 )
 
-install(TARGETS ${PROJECT_NAME} DESTINATION extensions/plugins)
+install(TARGETS ${PROJECT_NAME} DESTINATION extensions/plugins/tests)
 install(FILES testercell.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
 install(FILES testercell_config.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
 install(FILES TesterCell/tester.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
