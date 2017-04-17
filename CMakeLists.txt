@@ -3,8 +3,8 @@ project (TesterCell)
 set(CMAKE_INSTALL_PREFIX /Applications/Quantum.app/contents/resources/.kivy)
 set(CMAKE_CXX_COMPILER /usr/local/llvm/bin/clang++)
 set(CMAKE_CC_COMPILER /usr/local/llvm/bin/clang)
-set(PYTHON_INCLUDE_DIRS /Applications/Quantum.app/Contents/Frameworks/python/3.6.0/include/python3.6m)
-set(PYTHON_LIBRARIES /Applications/Quantum.app/Contents/Frameworks/python/3.6.0/lib)
+set(PYTHON_INCLUDE_DIRS /Applications/Quantum.app/Contents/Frameworks/python/3.6.1/include/python3.6m)
+set(PYTHON_LIBRARIES /Applications/Quantum.app/Contents/Frameworks/python/3.6.1/lib)
 
 add_definitions(-std=c++1y)
 
